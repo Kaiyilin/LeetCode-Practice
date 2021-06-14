@@ -141,6 +141,7 @@ def binaryInsertionSort(array):
 # MergeSort
 # Divide and Conquer 
 
+## my version 
 def merge(Lbranch, Rbranch):
     """
     the given input should be a sorted array
@@ -171,8 +172,6 @@ def merge(Lbranch, Rbranch):
     #print(buffer_array)
     return buffer_array
 
-
-
 def mergeSort(array):
     # the base case is one number only
     if len(array) <= 1:
@@ -189,15 +188,13 @@ def mergeSort(array):
     #print(f"Merge result {merge(Lbranch, Rbranch)}")
     return merge(Lbranch, Rbranch)
 
-
+## The version that similar to Geeks for Geeks
 def mergeSortGfG(array):
     # the base case is one number only
     if len(array) > 1:
         mid = len(array)//2
         Lbranch = array[:mid]
-        #print(f"{Lbranch}")
         Rbranch = array[mid:]
-        #print(Rbranch)
         # Recursively getting the base
         mergeSortGfG(Lbranch)
         mergeSortGfG(Rbranch)
