@@ -31,6 +31,8 @@ Could you do it in-place with O(1) extra space?
 # Solution1, my trivial solution
 # run time Runtime: 3144 ms Memory Usage: 25.7 MB
 
+from typing import List
+
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
         """
