@@ -18,6 +18,6 @@ def maxVal(toConsider, avail):
         withoutVal, withoutToTake = maxVal(toConsider[1:], avail)
     if withVal > withoutVal:
             result = (withVal, withToTake + (nextItem,))
-        else:
+    else:
             result = (withoutVal, withoutToTake)
     return result
