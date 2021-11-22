@@ -7,6 +7,7 @@ class Sorting():
     def __init__(self, array) -> None:
         super().__init__()
         self.array = array
+        
     def insertionSort(self):
         length = len(self.array)
         sorted_array = self.array.copy()
