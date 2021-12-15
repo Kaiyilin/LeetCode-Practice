@@ -26,6 +26,7 @@ Output: false
 Explanation: s becomes "c" while t becomes "b".
  
 """
+from collections import deque
 
 # RunTime: 20ms, 99.36% 
 # Memory: 14.1MB, 79.81%
