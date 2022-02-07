@@ -11,6 +11,7 @@ Output: 3
 """
 
 from collections import deque
+from typing import Optional
 
 # Runtime 36ms, 93.07%, Memory 15.3MB, 96.03%
 class Solution:
