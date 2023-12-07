@@ -30,13 +30,13 @@ num only consists of digits and does not contain any leading zeros.
 
 class Solution:
     def largestOddNumber(self, num: str) -> str:
-        # turn string to int
-        # exceed th conversion limitation on large number test case
-        # try to complete it in pure string
-        num = int(num)
-        while num > 0:
-            if num % 2 != 0:
-                return str(num)
-            else:
-                num //= 10
+        length = len(num)
+        for idx in range(length-1, -1, -1):
+            if int(num[idx]) % 2 != 0:
+                return num[:idx+1]
         return ""
+    
+
+test = "52"
+ans = Solution()
+print(ans.largestOddNumber(test))
