@@ -28,15 +28,22 @@ t.length == s.length
 s and t consist of any valid ascii character.
 """
 
+# Two strings are isomorphic only if the mapping is 1-to-1 and bijective
+# (meaning both s to t and t to s have 1-to-1 mappings).
+
 def isIsomorphic(s: str, t: str) -> bool:
-    # first think
     mapping_table = {}
 
     for idx in range(len(s)):
-        if s[idx] in mapping_table and mapping_table[s[idx]] != t[idx]:
+        s_char, t_char = s[idx], t[idx]
+        if s_char in mapping_table and mapping_table[s_char] != t_char:
+            return False
+        elif s_char not in mapping_table and t_char in mapping_table.values(): 
+            # if t_char alreadt in mapping_table but not s_char, 
+            # then it's not 1-to-1 mapping directly
             return False
         else:
-            mapping_table[s[idx]] = t[idx]
+            mapping_table[s_char] = t_char
     
     return True
 
