@@ -26,6 +26,7 @@ Follow up: What if the inputs contain Unicode characters? How would you adapt yo
 
 # idea 1: using hash and count to see if the element are all valid
 # idea 2: convert the string to unit-code then check the summation, got issue when s = 'ac', t = 'bb'
+# idea 3: sorted the string to see if it is the same 
 from collections import Counter
 
 def isAnagram(s: str, t: str) -> bool:
