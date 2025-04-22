@@ -14,4 +14,5 @@ class Solution:
 
 #math.log(16)
 sol = Solution()
-print(sol.isPowerOfFour(16))
+ans = sol.isPowerOfFour(16)
+print(ans)
